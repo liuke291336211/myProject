@@ -41,4 +41,14 @@ public class OrdersController {
         mv.setViewName("orders-list");
         return mv;
     }
+
+    //详情查询
+    @RequestMapping("/findById.do")
+    public ModelAndView findById(@RequestParam(name = "id", required = true) int id) {
+        ModelAndView mv = new ModelAndView();
+        Orders orders =  ordersService.findById(id);
+        mv.addObject("orders", orders);
+        mv.setViewName("orders-show");
+        return mv;
+    }
 }
