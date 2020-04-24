@@ -231,7 +231,7 @@
                             <ul class="menu">
                                 <li>
                                     <a href="#">
-                                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        <i class="fa fa-userInfos text-aqua"></i> 5 new members joined today
                                     </a>
                                 </li>
                                 <li>
@@ -242,7 +242,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="fa fa-users text-red"></i> 5 new members joined
+                                        <i class="fa fa-userInfos text-red"></i> 5 new members joined
                                     </a>
                                 </li>
                                 <li>
@@ -374,7 +374,7 @@
                                 <a href="#" class="btn btn-default btn-flat">修改密码</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">注销</a>
+                                <a href="${pageContext.request.contextPath}/logout.do" class="btn btn-default btn-flat">注销</a>
                             </div>
                         </li>
                     </ul>

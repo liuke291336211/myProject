@@ -167,7 +167,7 @@
                 <ul class="treeview-menu">
 
                     <li id="admin-login">
-                        <a href="all-admin-login.html">
+                        <a href="${pageContext.request.contextPath}/user/findAll.do?page=1&size=4">
                             <i class="fa fa-circle-o"></i> 用户管理
                         </a>
                     </li>
