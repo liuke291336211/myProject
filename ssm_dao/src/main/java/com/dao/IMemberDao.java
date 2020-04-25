@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Select;
 public interface IMemberDao {
 
     @Select("select * from member where id = #{id}")
-    Member findById(int id);
+    Member findById(Integer id);
 }

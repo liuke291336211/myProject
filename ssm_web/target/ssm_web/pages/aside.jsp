@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
+
 <html>
 
 <head>
@@ -127,10 +130,10 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="${pageContext.request.contextPath}/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>张猿猿</p>
+                <p><security:authentication property="principal.username"/></p>
                 <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
             </div>
         </div>
@@ -173,17 +176,17 @@
                     </li>
 
                     <li id="admin-register">
-                        <a href="all-admin-register.html">
+                        <a href="${pageContext.request.contextPath}/role/findAll.do?page=1&size=4">
                             <i class="fa fa-circle-o"></i> 角色管理
                         </a>
                     </li>
                     <li id="admin-register">
-                        <a href="all-admin-register.html">
+                        <a href="${pageContext.request.contextPath}/permissions/findAll.do?page=1&size=4">
                             <i class="fa fa-circle-o"></i> 资源权限管理
                         </a>
                     </li>
                     <li id="admin-register">
-                        <a href="all-admin-register.html">
+                        <a href="${pageContext.request.contextPath}/sysLog/findAll.do?page=1&size=50">
                             <i class="fa fa-circle-o"></i> 访问日志
                         </a>
                     </li>
@@ -202,7 +205,7 @@
                 <ul class="treeview-menu">
 
                     <li id="charts-chartjs">
-                        <a href="/ssm_web_war/product/findAll.do">
+                        <a href="${pageContext.request.contextPath}/product/findAll.do">
                             <i class="fa fa-circle-o"></i> 商品管理
                         </a>
                     </li>

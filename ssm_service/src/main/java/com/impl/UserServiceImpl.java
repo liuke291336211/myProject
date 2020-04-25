@@ -29,7 +29,7 @@ public class UserServiceImpl implements IUserService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         UserInfo userInfo = iUserDao.findByUserName(s);
 //        User user = new User(userInfo.getUsername(), "{noop}" + userInfo.getPassword(), getAuthority(userInfo.getRoles()));
-        User user = new User(userInfo.getUsername(),userInfo.getPassword(),
+        User user = new User(userInfo.getUsername(), userInfo.getPassword(),
                 userInfo.getStatus() == 0 ? false : true,true,true,true, getAuthority(userInfo.getRoles()));
         return user;
     }
@@ -43,7 +43,7 @@ public class UserServiceImpl implements IUserService {
 
     }
     @Override
-    public List<UserInfo> findAll(int page, int size) {
+    public List<UserInfo> findAll(Integer page, Integer size) {
         PageHelper.startPage(page, size);
         return iUserDao.findAll();
     }
@@ -55,4 +55,20 @@ public class UserServiceImpl implements IUserService {
         iUserDao.saveUser(userInfo);
     }
 
+    @Override
+    public void addRoleToUser(Integer userId, Integer[] roleIds) {
+        for (int roleId : roleIds) {
+            iUserDao.addRoleToUser(userId, roleId);
+        }
+    }
+
+    @Override
+    public List<Role> findOtherRoles(Integer userId) {
+        return iUserDao.findOtherRoles(userId);
+    }
+
+    @Override
+    public UserInfo findById(Integer id) {
+        return iUserDao.findById(id);
+    }
 }

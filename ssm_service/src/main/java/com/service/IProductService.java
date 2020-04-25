@@ -7,7 +7,7 @@ import java.util.List;
 public interface IProductService {
 
 
-    List<Product> findAll(int page, int size);
+    List<Product> findAll(Integer page, Integer size);
 
     void saveProduct(Product product);
 }

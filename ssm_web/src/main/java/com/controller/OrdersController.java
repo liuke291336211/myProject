@@ -29,8 +29,8 @@ public class OrdersController {
 //    }
     //已分页
     @RequestMapping("/findAll.do")
-    public ModelAndView findAll(@RequestParam(name = "page", required = true, defaultValue = "1")int page,
-                                @RequestParam(name = "size", required = true, defaultValue = "4") int size) {
+    public ModelAndView findAll(@RequestParam(name = "page", required = true, defaultValue = "1")Integer page,
+                                @RequestParam(name = "size", required = true, defaultValue = "4") Integer size) {
 
         ModelAndView mv = new ModelAndView();
         List<Orders> orders = ordersService.findAll(page, size);
@@ -44,7 +44,7 @@ public class OrdersController {
 
     //详情查询
     @RequestMapping("/findById.do")
-    public ModelAndView findById(@RequestParam(name = "id", required = true) int id) {
+    public ModelAndView findById(@RequestParam(name = "id", required = true) Integer id) {
         ModelAndView mv = new ModelAndView();
         Orders orders =  ordersService.findById(id);
         mv.addObject("orders", orders);

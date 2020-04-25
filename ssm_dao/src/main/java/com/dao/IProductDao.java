@@ -19,5 +19,5 @@ public interface IProductDao {
 
     //根据id查询产品
     @Select("select * from product where productNum = #{id}")
-    public Product findById(int id);
+    public Product findById(Integer id);
 }

@@ -211,8 +211,8 @@
                                     <td>${usr.phoneNum}</td>
                                     <td>${usr.statusStr}</td>
                                     <td class="text-center">
-                                        <button type="button" class="btn bg-olive btn-xs">详情</button>
-                                        <button type="button" class="btn bg-olive btn-xs">添加角色</button>
+                                        <button type="button" class="btn bg-olive btn-xs" onclick="location.href = '${pageContext.request.contextPath}/user/findById.do?id=${usr.id}'">详情</button>
+                                        <button type="button" class="btn bg-olive btn-xs" onclick="location.href = '${pageContext.request.contextPath}/user/findUserByIdAndRole.do?id=${usr.id}'">添加角色</button>
                                     </td>
                                 </tr>
 
@@ -238,7 +238,7 @@
                         <div class="pull-left">
                             <div class="form-group form-inline">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o"></i> 新建</button>
+                                    <button type="button" class="btn btn-default" title="新建"><i class="fa fa-file-o" onclick="location.href='${pageContext.request.contextPath}/pages/user-add.jsp'"></i> 新建</button>
                                     <button type="button" class="btn btn-default" title="删除"><i class="fa fa-trash-o"></i> 删除</button>
                                     <button type="button" class="btn btn-default" title="开启"><i class="fa fa-check"></i> 开启</button>
                                     <button type="button" class="btn btn-default" title="屏蔽"><i class="fa fa-ban"></i> 屏蔽</button>
@@ -265,7 +265,7 @@
                 <div class="box-footer">
                     <div class="pull-left">
                         <div class="form-group form-inline">
-                            总共2 页，共14 条数据。 每页
+                            总共${userList.pages} 页，共${userList.size} 条数据。 每页
                             <select class="form-control" id="changePageSize" onchange="changePageSize()">
                                 <option>1</option>
                                 <option>2</option>
@@ -379,7 +379,7 @@
     function changePageSize() {
         var pageSize = $("#changePageSize").val();
         //向服务器发送请求，改变每页显示条数
-        location.href = "${pageContext.request.contextPath}/product/findAll.do?page=${pageInfo.firstPage}&size="+pageSize;
+        location.href = "${pageContext.request.contextPath}/user/findAll.do?page=${pageInfo.firstPage}&size="+pageSize;
 
     }
     // 设置激活菜单

@@ -15,13 +15,13 @@ public class OrdersServiceImpl implements IOrdersService {
     @Autowired
     private IOrdersDao ordersDao;
     @Override
-    public List<Orders> findAll(int page, int size) {
+    public List<Orders> findAll(Integer page, Integer size) {
         PageHelper.startPage(page, size);
         return ordersDao.findAll();
     }
 
     @Override
-    public Orders findById(int id) {
+    public Orders findById(Integer id) {
         return ordersDao.findById(id);
     }
 }

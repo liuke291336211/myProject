@@ -36,5 +36,5 @@ public interface IOrdersDao {
             @Result(property = "travellers", column = "id", javaType = List.class, many = @Many(select = "com.dao.ITravellerDao.findByOrdersId")),
 
     })
-    Orders findById(int id);
+    Orders findById(Integer id);
 }

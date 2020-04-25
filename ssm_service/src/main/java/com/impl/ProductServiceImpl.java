@@ -17,7 +17,7 @@ public class ProductServiceImpl implements IProductService {
     @Autowired
     private IProductDao productDao;
     @Override
-    public List<Product> findAll(int page, int size) {
+    public List<Product> findAll(Integer page, Integer size) {
         PageHelper.startPage(page, size);
         return productDao.findAll();
     }
