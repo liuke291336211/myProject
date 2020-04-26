@@ -19,9 +19,15 @@
     <!--    配置数据源-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/back_management"/>
-        <property name="user" value="ssm"/>
-        <property name="password" value="123456"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/back_management?serverTimezone=UTC&amp;characterEncoding=utf-8"/>
+<!--        编译器中测试-->
+<!--        <property name="user" value="ssm"/>-->
+<!--        <property name="password" value="123456"/>-->
+
+        <!--        项目部署用的数据库账号-->
+        <property name="user" value="root"/>
+        <property name="password" value="liuke551816"/>
+
     </bean>
 
     <bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

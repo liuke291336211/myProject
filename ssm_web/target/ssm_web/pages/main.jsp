@@ -136,18 +136,13 @@
         <!-- @@master = admin-layout.html-->
         <!-- @@block = content -->
         <div class="content-wrapper">
-            <img src="img/001.jpg" width="100%" height="100%">
+            <img src="${pageContext.request.contextPath}/img/002.jpg" width="100%" height="100%">
         </div>
         <!-- @@close -->
         <!-- 内容区域 /-->
 
         <!-- 底部导航 -->
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                <b>Version</b> 1.0.8
-            </div>
-            <strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">研究院研发部</a>.</strong> All rights reserved.
-        </footer>
+        <jsp:include page="footer.jsp"/>
         <!-- 底部导航 /-->
 
     </div>

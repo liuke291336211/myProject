@@ -125,11 +125,11 @@
 
 
     <!-- Logo -->
-    <a href="all-admin-index.html" class="logo">
+    <a href="${pageContext.request.contextPath}/main/index.do" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>数据</b></span>
+        <span class="logo-mini"><b>LKer</b></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>数据</b>后台管理</span>
+        <span class="logo-lg"><b>LKer</b>后台管理</span>
     </a>
 
 
@@ -352,7 +352,7 @@
                             <img src="${pageContext.request.contextPath}/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                             <p>
-                                <security:authentication property="principal.username"/> - 数据管理员
+                                <security:authentication property="principal.username"/>用户
                                 <small>最后登录 11:20AM</small>
                             </p>
                         </li>

@@ -154,7 +154,7 @@
         <ul class="sidebar-menu">
             <li class="header">菜单</li>
 
-            <li id="admin-index"><a href="${pageContext.request.contextPath}/product/forword.do"><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
+            <li id="admin-index"><a href="${pageContext.request.contextPath}/main/index.do"><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
 
             <!-- 菜单 -->
 

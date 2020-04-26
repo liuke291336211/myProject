@@ -143,7 +143,7 @@
                     <small>添加角色详情</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="${pageContext.request.contextPath}/product/forword.do"><i class="fa fa-dashboard"></i> 首页</a></li>
+                    <li><a href="${pageContext.request.contextPath}/main/index.do"><i class="fa fa-dashboard"></i> 首页</a></li>
                     <li><a href="${pageContext.request.contextPath}/role/findAll.do">角色权限管理</a></li>
                     <li class="active">角色权限添加</li>
                 </ol>
@@ -197,12 +197,7 @@
         <!-- 内容区域 /-->
 
         <!-- 底部导航 -->
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                <b>Version</b> 1.0.8
-            </div>
-            <strong>Copyright &copy; 2014-2017 <a href="http://www.itcast.cn">研究院研发部</a>.</strong> All rights reserved.
-        </footer>
+        <jsp:include page="footer.jsp"/>
         <!-- 底部导航 /-->
 
     </div>

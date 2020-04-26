@@ -29,7 +29,6 @@ public class ProductController {
         mv.setViewName("product-list");
         return mv;
     }
-
     @RequestMapping("/saveProduct.do")
     public String saveProduct(Product product) {
         productService.saveProduct(product);
